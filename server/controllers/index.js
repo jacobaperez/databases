@@ -30,7 +30,7 @@ module.exports = {
     },
     // store username
     post: function (req, res) {
-      let params = [req.body[username], req.body[roomname]];
+      let params = [req.body[username]];
       models.messages.post(params, (err, results) => {
         if (err) throw err;
         res.json(results);
