@@ -15,15 +15,3 @@ var connection = mysql.createConnection({
 connection.connect();
 
 exports.connections;
-//
-// connection.query()
-//  = mysql.connect(function(err){
-//   if (err){
-//     throw err;
-//   }
-//   console.log('CONNECTED!');
-//
-//   db.Connection.query('select * from messages', function (err, rows, fields){
-//     console.log(rows[0].room);
-//   });
-// });

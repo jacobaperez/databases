@@ -6,7 +6,7 @@ var http = require('http');
 
 module.exports = {
   messages: {
-
+    // fetch all messages
     get: function (req, res) {
       var data = {
         'Data': ""
@@ -17,13 +17,14 @@ module.exports = {
         // console.log('Result: ', result);
       })
     }, // a function which produces all the messages
-
+    // store a message
     post: function () {} // a function which can be used to insert a message into the database
   },
 
   users: {
-    // Ditto as above.
+    // fetch all users
     get: function () {},
+    // store a user
     post: function () {}
   }
 };
