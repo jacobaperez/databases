@@ -8,7 +8,7 @@ module.exports = {
   messages: {
     // fetch all messages
     get: function (callback) {
-      let queryStr = "SELECT messages.id, messages.text, messages.roomname FROM messages left outer join users on (messages.user_id = user.id) order by messages.id desc";
+      let queryStr = "SELECT messages.id, messages.text, messages.roomname, users.username FROM messages left outer join users on (messages.user_id = user.id) order by messages.id desc";
       db.query(queryStr, (err, results) => {
         if (err) throw err;
         callback(results)
